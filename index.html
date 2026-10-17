@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vincent Kelvin N. Pardilla | IT Technical Support & Software Developer</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --subtext: #94a3b8;
+      --border: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    header {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    h1 { font-size: 1.8rem; color: var(--text); }
+    .subtitle { color: var(--accent); font-weight: 600; margin-bottom: 15px; }
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .btn {
+      background: var(--border);
+      color: var(--text);
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-primary { background: var(--accent); color: #0f172a; }
+    .btn:hover { transform: translateY(-2px); opacity: 0.9; }
+    section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+    h2 { font-size: 1.3rem; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 15px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+    .card-item { background: var(--bg); padding: 15px; border-radius: 10px; border: 1px solid var(--border); }
+    .card-item h3 { font-size: 1.05rem; margin-bottom: 5px; color: var(--text); }
+    .card-item p { font-size: 0.88rem; color: var(--subtext); }
+    .skills-tag { display: inline-block; background: var(--border); color: var(--accent); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; margin: 3px; }
+    .qr-box { text-align: center; margin-top: 15px; background: white; padding: 15px; border-radius: 12px; display: inline-block; }
+    footer { text-align: center; color: var(--subtext); font-size: 0.85rem; padding: 20px 0; }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="profile-photo.jpg" alt="Vincent Kelvin N. Pardilla" class="profile-photo.jpg">
+      <h1>Vincent Kelvin N. Pardilla</h1>
+      <p class="subtitle">IT Technical Support & Software Developer</p>
+      <p style="color: var(--subtext); font-size: 0.9rem;">PHINMA – Saint Jude College | BSIT Graduate</p>
+      
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="downloadVCard()">💾 Save Contact Info</button>
+        <a href="mailto:pardilla.vincent23@gmail.com" class="btn">✉️ Email Me</a>
+        <a href="tel:+639292262233" class="btn">📞 +63 929-226-2233</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p style="font-size: 0.95rem; color: var(--subtext);">
+        Detail-oriented Information Technology professional specializing in IT infrastructure, workstation deployment, system administration, and custom software development. Hands-on experience delivering end-user technical support and managing security configurations in corporate environments.
+      </p>
+    </section>
+
+    <section>
+      <h2>OJT & Work Experience</h2>
+      <div class="card-item" style="margin-bottom: 12px;">
+        <h3>IT Infrastructure & Security Intern</h3>
+        <p style="color: var(--accent); font-weight: 500;">Malayan Insurance Co., Inc. (486 Hours)</p>
+        <p>• Configured, imaged, and deployed Windows 10/11 workstations using cloning tools.<br>
+           • Administered enterprise security software including Cortex XDR and FortiClient VPN.<br>
+           • Diagnosed hardware faults, managed data backup/restoration, and integrated Vivotek NVR CCTV systems.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Key Projects</h2>
+      <div class="grid">
+        <div class="card-item">
+          <h3>Project Management System with Data Analytics</h3>
+          <p><strong>3rd Year Capstone (Top 9 Ranking)</strong></p>
+          <p>Frontend Developer & Technical Lead. Built a comprehensive tracking platform with integrated data analytics.</p>
+        </div>
+        <div class="card-item">
+          <h3>CineMoto Movie Ticketing System</h3>
+          <p><strong>2nd Year Academic Project</strong></p>
+          <p>Software & Database Developer. Engineered an onsite booking and POS app with MySQL backend and automated sales reporting.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div>
+        <span class="skills-tag">System Deployment</span>
+        <span class="skills-tag">Hardware Diagnostics</span>
+        <span class="skills-tag">Cortex XDR</span>
+        <span class="skills-tag">FortiClient VPN</span>
+        <span class="skills-tag">LAN / Network Troubleshooting</span>
+        <span class="skills-tag">Vivotek NVR CCTV</span>
+        <span class="skills-tag">Software Development</span>
+        <span class="skills-tag">MySQL</span>
+      </div>
+    </section>
+
+    <section style="text-align: center;">
+      <h2>Scan Digital Business Card</h2>
+      <p style="font-size: 0.85rem; color: var(--subtext);">Scan to view this page and save contact info directly to your phone.</p>
+      <div class="qr-box" id="qrcode"></div>
+    </section>
+
+    <footer>
+      <p>© 2026 Vincent Kelvin N. Pardilla. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function downloadVCard() {
+      const vcardData = 
+`BEGIN:VCARD
+VERSION:3.0
+N:Pardilla;Vincent Kelvin;N.;;
+FN:Vincent Kelvin N. Pardilla
+TITLE:IT Technical Support & Software Developer
+ORG:PHINMA - Saint Jude College
+TEL;TYPE=CELL,VOICE:+639292262233
+EMAIL;TYPE=INTERNET,PREF:pardilla.vincent23@gmail.com
+URL:${window.location.href}
+END:VCARD`;
+
+      const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.setAttribute('download', 'Vincent_Kelvin_Pardilla.vcf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    new QRCode(document.getElementById("qrcode"), {
+      text: window.location.href,
+      width: 125,
+      height: 125
+    });
+  </script>
+</body>
+</html>
